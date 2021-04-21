@@ -74,7 +74,7 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
+    background: url("../img/texture-paper.png");
     background-size: 280px 280px;
 }
 
@@ -174,8 +174,10 @@ a:hover {
 }
 
 .nav > li a:hover,
-.nav > li a:focus {
-    background: transparent;
+.nav > li a:focus,
+a:focus
+ {
+    background-color: #b8beba;
 }
 
 .navbar-toggle {
@@ -184,7 +186,7 @@ a:hover {
 }
 
 .navbar-toggle:hover {
-    background: transparent!important;
+    background: transparent!important;  
 }
 
 .navbar-toggle .icon-bar {
@@ -217,8 +219,8 @@ a:hover {
 }
 
 .btn-d,
-.btn-d:hover,
-.btn-d:focus {
+.btn-d:hover
+ {
     color: #FFF;
     background: #0000004D;
 }
@@ -235,11 +237,11 @@ button {
     border: 1px solid #00000014;
     border-bottom-color: #0000001A;
     text-shadow: 0 1px 0 #0000011A;
-    box-shadow: 0 1px 3px #00000140, inset 0 1px 0 0 #FFFFFF26);
+    box-shadow: 0 1px 3px #00000140, inset 0 1px 0 0 #FFFFFF26;
 }
 
 .icon-md {
-    font-size: 30px!important;
+    font-size: 30px; /*!important*/
 }
 
 .icon-lg {
@@ -454,7 +456,7 @@ h1 {
 }
 
 .portfolio-thumb {
-    margin-bottom: 24px;
+    margin:0 auto 24px auto;
 }
 
 .portfolio-row {
@@ -517,19 +519,19 @@ h1 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("../img/dots-bg.png");
 }
  
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("../img/lines-h2-bg.png");
 }
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("../img/la-chouette-agence-banniere.jpg");
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.jpg");
+    background-image: url("../img/image-de-presentation.jpg");
 }
 
 @media (max-width: 1024px) {
@@ -545,13 +547,13 @@ h1 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -567,10 +569,6 @@ h1 {
     .page-container {
         overflow-x: hidden;
         position: relative;
-    }
-    .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
@@ -607,7 +605,6 @@ h1 {
     .nav > li {
         margin-top: 0;
         border-bottom: 1px solid #0000001A;
-        background: #000000DD;
         text-align: left;
         padding-left: 15px;
         width: 100%;
@@ -678,7 +675,7 @@ blockquote {
 }
 
 .intro-portfolio {
-    margin: 0 28%;
+    margin: 0 15%;
 }
 
 .h1-subtitle {
@@ -703,4 +700,21 @@ input:invalid {
     font-style: italic;
     font-weight: 600;
 }
-  
+
+.focusFilter:focus {
+    filter: brightness(0.5) drop-shadow(16px 16px 20px #000000);
+}
+
+.focusFilter-whiteShadow:focus {
+    filter: brightness(0.5) drop-shadow(16px 16px 20px #FFFFFF);
+}
+
+.social-link {
+    height:100%;
+    width:100%;
+    display: block;
+}
+
+.bouton-envoyer:focus {
+    border: 3px solid #66afe9;
+}
